@@ -1,0 +1,31 @@
+{
+  "name": "styled-components-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to show how styled components work",
+  "main": "app/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git01.bravofly.com:10022/bguzman/styled-components-boilerplate.git"
+  },
+  "author": "bguzman",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.2",
+    "webpack": "^3.6.0"
+  },
+  "devDependencies": {
+    "react-hot-loader": "^3.0.0-beta.6",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
