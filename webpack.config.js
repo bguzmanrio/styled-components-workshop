@@ -19,6 +19,14 @@ module.exports = {
     }]
   },
 
+  resolve: {
+    mainFiles: ['index', 'main.jsx', 'main.js'],
+    extensions: ['.jsx', '.js'],
+    alias: {
+      components: path.resolve(__dirname, 'app/components/')
+    }
+  },
+
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'dist/vendor.bundle.js' }),
     new webpack.HotModuleReplacementPlugin(),
