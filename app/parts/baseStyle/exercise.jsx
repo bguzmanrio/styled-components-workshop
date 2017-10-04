@@ -7,7 +7,7 @@ export function Exercise () {
       <div className='separator'></div>
       <div>
         <p>
-          What you have to achieve is to migrate every class as a styled component
+          What we are going to do to begin is to migrate the HTML components and CSS classes to some new styled-component
         </p>
         <p>
           In order to achieve that, you will have to overcome the CSS cascading inheritance and use the composition of React components
