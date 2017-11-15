@@ -23,7 +23,8 @@ module.exports = {
     mainFiles: ['index', 'main.jsx', 'main.js'],
     extensions: ['.jsx', '.js'],
     alias: {
-      components: path.resolve(__dirname, 'app/components/')
+      components: path.resolve(__dirname, 'app/components/'),
+      styledComponents: path.resolve(__dirname, 'app/styledComponents/')
     }
   },
 

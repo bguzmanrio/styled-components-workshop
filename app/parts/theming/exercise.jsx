@@ -1,9 +1,10 @@
 import React from 'react';
+import { SecondaryTitle } from 'styledComponents/titles';
 
 export function Exercise () {
   return (
     <div className='content'>
-      <h2>Final Part: <i>Get your hands to work! </i></h2>
+      <SecondaryTitle>Final Part: <i>Get your hands to work! </i></SecondaryTitle>
       <div className='separator'></div>
       <div>
         <p>You made it to the end! Now you will have to apply everything you have learnt in the way</p>

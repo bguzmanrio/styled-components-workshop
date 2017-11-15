@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+import 'styledComponents/global';
+import { MainTitle, TitleContent } from 'styledComponents/titles';
+import { MainImage } from 'styledComponents/mainImage';
+import { Container } from 'styledComponents/appContainer';
 import { Tabs } from 'components/Tabs';
 import { PartContainer } from 'components/partContainer';
 import { Introduction } from './parts/introduction/introduction';
@@ -32,15 +37,17 @@ const tabsConfig = [{
 
 function App () {
   return (
-    <div>
-      <h1>
-        <img src='https://www.styled-components.com/static/logo.png'/>
-        <span>Styled components Kata</span>
-      </h1>
-      <div className='app-container'>
-        <Tabs tabs={tabsConfig}/>
+    <ThemeProvider theme={themes.DarkTheme}>
+      <div>
+        <MainTitle>
+          <MainImage src='https://www.styled-components.com/static/logo.png'/>
+          <TitleContent>Styled components Kata</TitleContent>
+        </MainTitle>
+        <Container>
+          <Tabs tabs={tabsConfig}/>
+        </Container>
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 

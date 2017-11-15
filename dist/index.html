@@ -10,100 +10,14 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
-
-      * {
-        font-family: 'Ubuntu', sans-serif;
-      }
-
-      html, body {
-        margin: 0;
-        max-width: 100%;
-      }
-
-      a {
-        text-decoration: none;
-        display: block;
-      }
-
-      a:visited {
-        color: inherit;
-      }
-
-      a:hover {
-        font-weight: bold;
-      }
-
-      h1 {
-        margin-top: 0;
-        background: linear-gradient(20deg, #db7093, #daa357);
-        padding: 16px;
-        color: white;
-      }
-
-      h1 img {
-        max-height: 1em;
-        vertical-align: text-top;
-        margin-right: 8px;
-      }
-
-      h2 {
-        margin: 0;
-      }
-
-      ul {
-        padding-left: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-
-      li {
-        list-style: none;
-      }
-
-      .app-container {
-        display: flex;
-        flex-direction: row;
-      }
 
       .tabs-container {
         display: flex;
         flex-direction: row;
       }
 
-      .tabs {
-        min-width: 120px;
-      }
-
-      .tabs li {
-        flex-grow: 1;
-        padding: 8px 4px;
-        border: 1px solid #E3E3E3;
-      }
-
-      .tab:hover {
-        cursor: pointer;
-        animation: borderColor .3s linear;
-        animation-fill-mode: forwards;
-      }
-
-      .tab.active {
-        animation: activateTab .3s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-        animation-play-state: running;
-        border-color: #3E3E3E;
-      }
-
       .tabs-content {
         flex-grow: 5;
-      }
-
-      .tabs-secondary .tab.active{
-        animation: activateSecondaryTab .3s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-        animation-play-state: running;
       }
 
       .content {
@@ -115,26 +29,7 @@
         border-top: 1px solid black;
       }
 
-      @media (max-width: 420px) {
-        h1 img {
-          width: 150px;
-          max-height: 150px;
-        }
-
-        h1 span {
-          display: none;
-        }
-      }
-
       @media (max-width: 715px) {
-        h1 {
-          text-align: center;
-        }
-
-        .app-container {
-          flex-direction: column;
-        }
-
         .tabs-container {
           flex-direction: column;
         }
@@ -149,30 +44,6 @@
         }
       }
 
-      @keyframes activateSecondaryTab {
-        from {
-          background-color: white;
-          color: black;
-        }
-
-        to {
-          background-color: #daa357;
-          color: white;
-        }
-      }
-
-      @keyframes activateTab {
-        from {
-          background-color: white;
-          color: black;
-        }
-
-        to {
-          background-color: #db7093;
-          color: white;
-        }
-
-      }
 
       @keyframes borderColor {
         from {

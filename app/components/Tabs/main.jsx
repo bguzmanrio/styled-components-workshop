@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StyledTabs, StyledTab, StyledTabActive, StyledTabActiveSecondary } from 'styledComponents/tabs';
 
 export class Tabs extends Component {
 
@@ -15,18 +16,20 @@ export class Tabs extends Component {
   render() {
     const {activeTab} = this.state;
     const {isSecondary} = this.props;
-    const tabs = this.props.tabs.map((tab, index) => {
-        const activeClass = index === activeTab ? 'active' : '';
-        return (
-          <li key={index} className={`tab ${activeClass}`} onClick={this.handleTabChange(index)} >{tab.title}</li>
-        )
-      });
+    const tabs = this.props.tabs.map((tab, index) => (
+      <StyledTab
+        key={index}
+        active={index === activeTab}
+        isSecondary={isSecondary}
+        onClick={this.handleTabChange(index)}>{tab.title}</StyledTab>
+    ));
 
     return (
       <div className='tabs-container'>
-        <ul className={`tabs ${isSecondary ? 'tabs-secondary' : ''}`}>
+        {/* <StyledTabs className={`tabs ${isSecondary ? 'tabs-secondary' : ''}`}> */}
+        <StyledTabs>
           { tabs }
-        </ul>
+        </StyledTabs>
         <div className='tabs-content'>
           {this.props.tabs[activeTab].content}
         </div>

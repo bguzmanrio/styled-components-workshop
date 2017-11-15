@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'styledComponents/link';
 
 export function Introduction () {
   return (
@@ -10,8 +11,8 @@ export function Introduction () {
       <p>Good luck!</p>
       <div className='separator'></div>
       <p>Some useful resources:</p>
-      <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>Guide to flexbox</a>
-      <a href='https://www.styled-components.com/docs/basics'>Styled-Components docs</a>
+      <Link href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>Guide to flexbox</Link>
+      <Link href='https://www.styled-components.com/docs/basics'>Styled-Components docs</Link>
     </div>
   );
 }

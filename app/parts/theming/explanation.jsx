@@ -1,10 +1,11 @@
 import React from 'react';
 import {Code} from 'components/Code';
+import { SecondaryTitle } from 'styledComponents/titles';
 
 export function Explanation () {
   return (
     <div className='content'>
-      <h2>Final part: <i>Theming in Styled-Components</i></h2>
+      <SecondaryTitle>Final part: <i>Theming in Styled-Components</i></SecondaryTitle>
       <div className='separator'></div>
       <h3>We have several themes in our app...</h3>
       <Code>

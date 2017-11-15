@@ -1,10 +1,11 @@
 import React from 'react';
 import {Code} from 'components/Code';
+import { SecondaryTitle } from 'styledComponents/titles';
 
 export function Explanation () {
   return (
     <div className='content'>
-      <h2>Part 2: <i>Interpolating props in our styled-components</i></h2>
+      <SecondaryTitle>Part 2: <i>Interpolating props in our styled-components</i></SecondaryTitle>
       <div className='separator'></div>
       <h3>How to use props in our component</h3>
       <Code>
