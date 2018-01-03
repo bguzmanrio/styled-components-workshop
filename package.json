@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@git01.bravofly.com:10022/bguzman/styled-components-boilerplate.git"
+    "url": "git+https://github.com/bguzmanrio/styled-components-workshop.git"
   },
   "author": "bguzman",
   "license": "ISC",
