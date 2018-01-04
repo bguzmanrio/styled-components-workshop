@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 
 export class Tabs extends Component {
 
-  constructor({activeTab=0}) {
-    super();
-    this.state = { activeTab };
-    this.handleTabChange = this.handleTabChange.bind(this);
+  state = {
+    activeTab: this.props.activeTab || 0
+  };
+
+  handleTabChange = (activeTab) => {
+    return (() => this.setState({activeTab}));
   }
 
-  handleTabChange (activeTab) {
-    return (() => this.setState({activeTab}));
+  componentWillReceiveProps = ({ activeTab = 0}) => {
+    if (activeTab !== this.state.activeTab) {
+      this.setState({ activeTab });
+    }
   }
 
   render() {
