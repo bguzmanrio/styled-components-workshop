@@ -1,11 +1,12 @@
 import React from 'react';
 import { SecondaryTitle } from 'styledComponents/titles';
+import { Separator } from 'styledComponents/separator';
 
 export function Exercise () {
   return (
     <div className='content'>
       <SecondaryTitle>Part 1: <i>Get your hands to work! </i></SecondaryTitle>
-      <div className='separator'></div>
+      <Separator />
       <div>
         <p>
           What we are going to do to begin is to migrate the HTML components and CSS classes to some new styled-component

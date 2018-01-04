@@ -1,12 +1,14 @@
 import styled from 'styled-components';
+import { BREAK_POINTS, SEPARATIONS } from '../constants';
 
 export const MainImage = styled.img`
-  max-height: 1em;
   vertical-align: text-top;
-  margin-right: 8px;
+  margin-right: ${SEPARATIONS.base};
+  width: 150px;
+  max-height: 150px;
 
-  @media (max-width: 420px) {
-    width: 150px;
-    max-height: 150px;
+  @media (min-width: ${BREAK_POINTS.mobile}) {
+    max-height: 1em;
+    width: auto;
   }
 `;

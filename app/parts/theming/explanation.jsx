@@ -1,12 +1,13 @@
 import React from 'react';
 import {Code} from 'components/Code';
 import { SecondaryTitle } from 'styledComponents/titles';
+import { Separator } from 'styledComponents/separator';
 
 export function Explanation () {
   return (
     <div className='content'>
       <SecondaryTitle>Final part: <i>Theming in Styled-Components</i></SecondaryTitle>
-      <div className='separator'></div>
+      <Separator />
       <h3>We have several themes in our app...</h3>
       <Code>
         {`
@@ -46,7 +47,7 @@ export function Explanation () {
       <p>
         It will contain the variables inside the theme passed to the ThemeProvider
       </p>
-      <div className='separator'></div>
+      <Separator />
       <h3>I need to apply different themes in my app...</h3>
       <Code>
         {`

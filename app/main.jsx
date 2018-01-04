@@ -35,20 +35,37 @@ const tabsConfig = [{
   content: <PartContainer Explanation={Part4Explanation} Exercise={Part4Exercise} />
 }];
 
-function App () {
-  return (
-    <ThemeProvider theme={themes.DarkTheme}>
-      <div>
-        <MainTitle>
-          <MainImage src='https://www.styled-components.com/static/logo.png'/>
-          <TitleContent>Styled components Kata</TitleContent>
-        </MainTitle>
-        <Container>
-          <Tabs tabs={tabsConfig}/>
-        </Container>
-      </div>
-    </ThemeProvider>
-  );
+class App extends React.Component {
+  state = {
+    theme: 'BaseTheme'
+  };
+
+  handleThemeChange = ({target}) => {
+    this.setState({
+      theme: target.value
+    });
+  };
+
+  render () {
+    return (
+      <ThemeProvider theme={themes[this.state.theme]}>
+        <div>
+          <MainTitle>
+            <MainImage src='https://www.styled-components.com/static/logo.png'/>
+            <TitleContent>Styled components Kata</TitleContent>
+            <select value={this.state.theme} onChange={this.handleThemeChange} >
+              {Object.keys(themes).map(theme => (
+                <option key={theme} value={theme}>{theme}</option>
+              ))}
+            </select>
+          </MainTitle>
+          <Container>
+            <Tabs tabs={tabsConfig}/>
+          </Container>
+        </div>
+      </ThemeProvider>
+    );
+  }
 }
 
 ReactDOM.render(<App />, document.querySelector('#demo'));

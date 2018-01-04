@@ -1,30 +1,30 @@
 import {keyframes} from 'styled-components';
 
-export const activateTab = keyframes`
+export const activateTab = props => keyframes`
   from {
     background-color: white;
-    color: black;
+    color: white;
   }
 
   to {
-    background-color: #db7093;
+    background-color: ${props.theme.primaryColor};
     color: white;
   }
 `;
 
-export const activateSecondaryTab = keyframes`
+export const activateSecondaryTab = props => keyframes`
   from {
     background-color: white;
-    color: black;
+    color: white;
   }
 
   to {
-    background-color: #daa357;
+    background-color: ${props.theme.secondaryColor};
     color: white;
   }
 `;
 
-export const borderColor = keyframes`
+export const borderColor = props => keyframes`
   from {
     background-color: white;
     border-color: #E3E3E3;
@@ -39,7 +39,8 @@ export const borderColor = keyframes`
   }
 
   to {
-    background-color: #daa357;
+    background-color: ${props.theme.secondaryColor};
+    color: white;
     border-color: #3E3E3E;
   }
 `;

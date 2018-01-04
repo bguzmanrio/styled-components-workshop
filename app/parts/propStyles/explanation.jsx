@@ -1,12 +1,13 @@
 import React from 'react';
 import {Code} from 'components/Code';
 import { SecondaryTitle } from 'styledComponents/titles';
+import { Separator } from 'styledComponents/separator';
 
 export function Explanation () {
   return (
     <div className='content'>
       <SecondaryTitle>Part 2: <i>Interpolating props in our styled-components</i></SecondaryTitle>
-      <div className='separator'></div>
+      <Separator />
       <h3>How to use props in our component</h3>
       <Code>
         {`
@@ -33,7 +34,7 @@ export function Explanation () {
         You can interpolate props inside your styled component. This way you can go beyond!
       </p>
       <p><b>THIS IS WHY IT IS CALLED CSS IN JS, or JSS</b></p>
-      <div className='separator'></div>
+      <Separator />
     </div>
   );
 }

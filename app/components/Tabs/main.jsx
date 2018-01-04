@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import { StyledTabs, StyledTab, StyledTabActive, StyledTabActiveSecondary } from 'styledComponents/tabs';
+import { StyledTabs, StyledTab, StyledTabActive, StyledTabActiveSecondary, StyledTabsContainer } from 'styledComponents/tabs';
 
 export class Tabs extends Component {
 
-  constructor({activeTab=0}) {
-    super();
-    this.state = { activeTab };
-    this.handleTabChange = this.handleTabChange.bind(this);
-  }
+  state = {
+    activeTab: this.props.activeTab || 0
+  };
 
-  handleTabChange (activeTab) {
+  handleTabChange = (activeTab) => {
     return (() => this.setState({activeTab}));
-  }
+  };
+
+  componentWillReceiveProps = ({ activeTab=0 }) => {
+    if (activeTab !== this.state.activeTab) {
+      this.setState({ activeTab });
+    }
+  };
 
   render() {
     const {activeTab} = this.state;
@@ -25,15 +29,13 @@ export class Tabs extends Component {
     ));
 
     return (
-      <div className='tabs-container'>
+      <StyledTabsContainer>
         {/* <StyledTabs className={`tabs ${isSecondary ? 'tabs-secondary' : ''}`}> */}
         <StyledTabs>
           { tabs }
         </StyledTabs>
-        <div className='tabs-content'>
-          {this.props.tabs[activeTab].content}
-        </div>
-      </div>
+        {this.props.tabs[activeTab].content}
+      </StyledTabsContainer>
     );
   }
 }

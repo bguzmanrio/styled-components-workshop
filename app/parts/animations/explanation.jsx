@@ -1,12 +1,13 @@
 import React from 'react';
 import {Code} from 'components/Code';
 import { SecondaryTitle } from 'styledComponents/titles';
+import { Separator } from 'styledComponents/separator';
 
 export function Explanation () {
   return (
     <div className='content'>
       <SecondaryTitle>Part 3: <i>Animating out styled components!</i></SecondaryTitle>
-      <div className='separator'></div>
+      <Separator />
       <Code>
         {`
         import styled, {keyframes} from 'styled-components';

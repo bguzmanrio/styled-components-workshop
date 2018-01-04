@@ -1,19 +1,23 @@
 import styled from 'styled-components';
+import { BREAK_POINTS, SEPARATIONS } from '../constants';
 
 export const MainTitle = styled.h1`
   margin-top: 0;
-  background: linear-gradient(20deg, #db7093, #daa357);
-  padding: 16px;
+  background: ${props => props.theme.gradient};
+  padding: ${SEPARATIONS.double};
   color: white;
+  text-align: center;
 
-  @media (max-width: 715px) {
-    text-align: center;
+  @media (min-width: ${BREAK_POINTS.tablet}) {
+    text-align: left;
   }
 `;
 
 export const TitleContent = styled.span`
-  @media (max-width: 420px) {
-    display: none;
+  display: none;
+
+  @media (min-width: ${BREAK_POINTS.mobile}) {
+    display: inline-block;
   }
 `;
 

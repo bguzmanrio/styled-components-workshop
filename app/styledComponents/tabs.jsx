@@ -1,19 +1,25 @@
 import styled, {css} from 'styled-components';
 import {activateTab, activateSecondaryTab, borderColor} from './animations';
+import { BREAK_POINTS, SEPARATIONS } from '../constants';
 
 export const StyledTabsContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media (min-width: ${BREAK_POINTS.tablet}) {
+    flex-direction: row;
+  }
 `;
 
 export const StyledTabs = styled.ul`
-  padding-left: 0;
+  display: flex;
   margin-top: 0;
   margin-bottom: 0;
   min-width: 120px;
+  padding-left: 0;
 
-  @media (max-width: 715px) {
-    display: flex;
+  @media (min-width: ${BREAK_POINTS.tablet}) {
+    display: block;
   }
 `;
 
@@ -25,7 +31,7 @@ const activate = css`
   animation-play-state: running;
 `;
 
-const hover = css`
+const hover = theme => css`
   animation-name: ${borderColor};
   animation-duration: .3s;
   animation-fill-mode: forwards;
@@ -35,7 +41,7 @@ const hover = css`
 
 export const StyledTab = styled.li`
   flex-grow: 1;
-  padding: 8px 4px;
+  padding: ${SEPARATIONS.base} ${SEPARATIONS.middle};
   border: 1px solid #E3E3E3;
   list-style: none;
 
@@ -44,6 +50,6 @@ export const StyledTab = styled.li`
 
   &:hover {
     cursor: pointer;
-    ${hover};
+    ${props => hover(props.theme)}
   }
 `;

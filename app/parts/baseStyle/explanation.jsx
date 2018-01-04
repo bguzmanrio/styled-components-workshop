@@ -1,12 +1,13 @@
 import React from 'react';
 import {Code} from 'components/Code';
 import { SecondaryTitle } from 'styledComponents/titles';
+import { Separator } from 'styledComponents/separator';
 
 export function Explanation () {
   return (
     <div className='content'>
       <SecondaryTitle>Part 1: <i>The base of Styled-Components</i></SecondaryTitle>
-      <div className='separator'></div>
+      <Separator />
       <h3>What is a styled-component?</h3>
       <Code>
         {`
@@ -49,7 +50,7 @@ export function Explanation () {
       <p>
         Extra! It also adds vendor prefixes!
       </p>
-      <div className='separator'></div>
+      <Separator />
       <h3>Can I reuse the styles for a different HTML tag?</h3>
       <Code>
         {`
@@ -66,7 +67,7 @@ export function Explanation () {
       <p>
         If you use the <b>.withComponent()</b> method, it will create a new component using the HTML tag you have passed as parameter
       </p>
-      <div className='separator'></div>
+      <Separator />
       <h3>I need to apply a style to every element on my app...</h3>
       <Code>
         {
@@ -90,7 +91,7 @@ export function Explanation () {
         }
       </Code>
       <p><b>injectGlobal</b> is what you need!</p>
-      <div className='separator'></div>
+      <Separator />
       <h3>What about media queries?</h3>
       <Code>
         {
@@ -109,7 +110,7 @@ export function Explanation () {
         }
       </Code>
       <p>Media queries are just css, so it is transparent!</p>
-      <div className='separator'></div>
+      <Separator />
       <p>
         So, after this briefing, you must be prepared to start with the first exercise. GL
       </p>
